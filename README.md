@@ -8,14 +8,14 @@
 - The matching RGB and hex values
 
 **Tools & Libraries Used**
-PIL: Opens and processes image files
-collections.Counter: Counts RGB color frequencies
-requests: Sends API calls to TheColorAPI
-matplotlib: Visualizes color data with bar charts
+- PIL: Opens and processes image files
+- collections.Counter: Counts RGB color frequencies
+- requests: Sends API calls to TheColorAPI
+- matplotlib: Visualizes color data with bar charts
 
 **Visual Output**
-Chart 1: RGB breakdown (Red, Green, Blue bars)
-Chart 2: A solid bar filled with the most common color
+- Chart 1: RGB breakdown (Red, Green, Blue bars)
+- Chart 2: A solid bar filled with the most common color
 
 **API Note**
-The project uses TheColorAPI to translate RGB values into real-world color names. If the exact color isn’t available, the closest match is returned.
+- The project uses TheColorAPI to translate RGB values into real-world color names. If the exact color isn’t available, the closest match is returned.
