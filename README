@@ -1,18 +1,21 @@
-PURPOSE
-The purpose of this project is to provide the user the name of the most common color present in any jpg photo they want. 
+**This project identifies and names the most common color found in any .jpg image using image analysis and an external color API. The goal is to help users quickly find and visualize the dominant color in any image by name, hex code, and RGB values.**
 
-FUNCTIONALITY
-We import the 4 below to run the code
-Requests: Allows us to make HTTP requests to thecolorapi.
-PIL: Lets the code open and process our jpgs.
-Counter: Gives us a convienent way to count the occurances of RGB values in the photo.
-Matplotlib: Helps us create the visualizations.
-To use the code, we just have to press run then type in the complete file name of the jpg we want to get color data about. The jpg must be saved into the cis3120-project folder. 
+**Functionality**
+- Users run the script and input the filename of a .jpg image.
+- The image must be saved in the same folder as the Python script.
+- The script processes the image and outputs:
+- The closest color name (via TheColorAPI)
+- The matching RGB and hex values
 
-API - https://www.thecolorapi.com/
-The API i used to do this is called thecolorapi. This API has a large database of colors, RGB codes, hexcodes, and much more. However one limitation of the project is that because there is such a large amount of colors/shades thecolorapi does not have every color in existance. To make up for this, the code will output the name of the color that is the colosest posible match to one that thecolorapi has in its database. Other additonal data the code will output includes the RGB and hex code of the color. 
+**Tools & Libraries Used**
+PIL: Opens and processes image files
+collections.Counter: Counts RGB color frequencies
+requests: Sends API calls to TheColorAPI
+matplotlib: Visualizes color data with bar charts
 
-VISUALIZATION
-The code uses matplotlib for visualization.
-First chart: A bar chart that shows the rbg units of the color. Each bar is colored in its respective unit to make it clearer.
-Second chart: A bar chart that shows how the most common color looks like. 
+**Visual Output**
+Chart 1: RGB breakdown (Red, Green, Blue bars)
+Chart 2: A solid bar filled with the most common color
+
+**API Note**
+The project uses TheColorAPI to translate RGB values into real-world color names. If the exact color isn’t available, the closest match is returned.
